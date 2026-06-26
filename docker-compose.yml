@@ -8,8 +8,8 @@ services:
       - "4000:4000"
     networks:
       - full-stack-deploy
-    env_file:
-      - .env.production
+    environment:
+      - NODE_ENV=prod
     restart: unless-stopped
   client:
     build: ./client
